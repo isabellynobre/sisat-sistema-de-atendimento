@@ -28,4 +28,4 @@
 <script src="<c:url value="/resources/js/bootbox.min.js" />"></script>
 <script src="<c:url value="/resources/js/bootstrapValidator.min.js" />"></script>
 <script	src="<c:url value="/resources/js/jquery.appendGrid-1.5.2.js" />"></script>
-
+<script	src="<c:url value="/webjars/d3js/3.5.5/d3.min.js" />"></script>

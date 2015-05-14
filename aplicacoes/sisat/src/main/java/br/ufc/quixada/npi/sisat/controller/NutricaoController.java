@@ -295,6 +295,11 @@ public class NutricaoController {
 		return "redirect:/nutricao/buscar_agendamento";
 	}
 
+	@RequestMapping(value = {"/grafico-peso"}, method = RequestMethod.GET)
+	public String gerarGraficoPeso(){
+		return "nutricao/grafico-peso";
+	}
+
 	private Pessoa getUsuarioLogado(HttpSession session) {
 		if (session.getAttribute("usuario") == null) {
 			Pessoa pessoa = pessoaService.getPessoaByLogin(SecurityContextHolder.getContext().getAuthentication().getName());

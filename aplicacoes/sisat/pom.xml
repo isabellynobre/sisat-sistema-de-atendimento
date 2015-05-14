@@ -185,6 +185,12 @@
 			<version>${jquery-ui.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>d3js</artifactId>
+			<version>3.5.5-1</version>
+		</dependency>
+
 		<!-- Dandelion -->
 		<dependency>
 			<groupId>com.github.dandelion</groupId>
