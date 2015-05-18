@@ -3,7 +3,7 @@
 
 <h3>Paciente</h3>
 	<div class="form-group">
-		<label for="altura" class="col-sm-2 control-label">Altura:</label>
+		<label for="altura" class="col-sm-2 control-label">AlturaAlturaAlturaAltura:</label>
 		<div class="col-sm-3">
 			<form:input id="altura" type="number" path="paciente.altura" cssClass="form-control" placeholder="Altura" />
 			<div class="error-validation">
@@ -15,7 +15,7 @@
 	<div class="form-group">
 		<label for="peso" class="col-sm-2 control-label">Peso:</label>
 		<div class="col-sm-3">
-			<form:input id="peso" type="number" path="peso" cssClass="form-control" placeholder="Peso"/>
+			<form:input id="peso" type="number" path="peso" cssClass="form-control" placeholder="Peso" pattern="[1-9]+([\.|,][0-9]{2})?" step="0.01"/>
 			<div class="error-validation">
 				<form:errors path="peso"></form:errors>
 			</div>

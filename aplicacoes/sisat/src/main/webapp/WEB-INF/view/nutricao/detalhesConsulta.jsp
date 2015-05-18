@@ -37,6 +37,8 @@
 					de Frequencia Alimentar</a></li>
 					
 			<li><a data-toggle="tab" href="#orientacoes">Orientações Individuais</a></li>
+
+			<li><a data-toggle="tab" href="#graficos">Graficos</a></li>
 		</ul>
 
 		<div class="tab-content">
@@ -59,6 +61,11 @@
 			<!-- ABA DE ORIENTACOES -->
 			<div id="orientacoes" class="tab-pane fade">
 				<jsp:include page="abas/detalhesOrientacoes.jsp" /> 
+			</div>
+			
+			<!-- ABA DE GRAFICOS -->
+			<div id="graficos" class="tab-pane fade">
+				<jsp:include page="abas/graficos-paciente.jsp" /> 
 			</div>
 		</div>
 	</div>

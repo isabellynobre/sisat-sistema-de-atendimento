@@ -7,11 +7,13 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -21,7 +23,12 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
-@NamedQuery(name = "ConsultaNutricional.findConsultaNutricionalWithDocumentosById", query = "select c from ConsultaNutricional c left join fetch c.documentos where c.id=:id")
+@NamedQueries({
+	@NamedQuery(name = "ConsultaNutricional.findConsultaNutricionalWithDocumentosById", query = "select c from ConsultaNutricional c left join fetch c.documentos where c.id=:id"),
+	@NamedQuery(name = "ConsultaNutricional.findPesoAndData", query = "select c.data, c.peso from ConsultaNutricional c join c.paciente p where c.paciente.id = :id"),
+	@NamedQuery(name = "ConsultaNutricional.findCircunferenciaAndData", query = "select c.data, c.circunferenciaCintura from ConsultaNutricional c join c.paciente p where c.paciente.id = :id"),
+	@NamedQuery(name = "ConsultaNutricional.findIMCAndData", query = "select c.data, pes.sexo, (c.peso / (c.paciente.altura * c.paciente.altura)) from ConsultaNutricional c join c.paciente p join p.pessoa pes where c.paciente.id = :id"),
+})
 @Entity
 public class ConsultaNutricional {
 
@@ -29,7 +36,7 @@ public class ConsultaNutricional {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL,fetch=FetchType.EAGER)
 	@JoinColumn(name = "consultanutricional_id")
 	private List<FrequenciaAlimentar> frequencias;
 

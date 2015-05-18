@@ -297,6 +297,26 @@ public class NutricaoController {
 
 	@RequestMapping(value = {"/grafico-peso"}, method = RequestMethod.GET)
 	public String gerarGraficoPeso(){
+		List<ConsultaNutricional> o = consultaNutricionalService.getIMCAndData(new Long(2));
+
+		return "nutricao/grafico-peso";
+	}
+
+	@RequestMapping(value = {"/grafico-peso"}, method = RequestMethod.POST)
+	public String gerarGraficoPesoq(){
+		List<ConsultaNutricional> o = consultaNutricionalService.getPesoAndData(new Long(2));
+		return "nutricao/grafico-peso";
+	}
+
+	@RequestMapping(value = {"/grafico-cincunferencia"}, method = RequestMethod.POST)
+	public String gerarGraficoCincunferencia(){
+		List<ConsultaNutricional> o = consultaNutricionalService.getCircunferenciaAndData(new Long(2));
+		return "nutricao/grafico-peso";
+	}
+
+	@RequestMapping(value = {"/grafico-imc"}, method = RequestMethod.POST)
+	public String gerarGraficoIMC(){
+		List<ConsultaNutricional> o = consultaNutricionalService.getIMCAndData(new Long(2));
 		return "nutricao/grafico-peso";
 	}
 

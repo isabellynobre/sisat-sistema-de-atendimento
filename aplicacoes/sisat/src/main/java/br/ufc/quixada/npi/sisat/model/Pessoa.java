@@ -21,7 +21,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import br.ufc.quixada.npi.sisat.model.Papel;
 
 @NamedQueries({
 		@NamedQuery(name = "Pessoa.findPessoasByCpf", query = "select p from Pessoa p where p.cpf = :cpf"),
