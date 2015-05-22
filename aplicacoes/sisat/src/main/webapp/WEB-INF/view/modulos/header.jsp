@@ -83,6 +83,57 @@ body {
     }
 }
 
+
+.glyphicon {
+  padding-top: 6px;
+  font-size: 20px;
+}
+
+a{
+	background: #FFF;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #1fa67b;
+/*     padding: 2px; */
+	border-top: 6px solid #1fa67b;
+	border-bottom: 6px solid #1fa67b;
+    border-left: 0;
+    border-right: 0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+  line-height: 25px;
+  background: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 6px 6px 0;
+  border-color: #1fa67b transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-left: -6px;
+  top: 0;
+  left: 50%;
+  line-height: 50px;
+  }
+
+
+img {
+  padding: 0;
+  margin: -15px -10px -15px -15px;
+  width: 320px;
+  height: 100px;
+}
+li a {
+  height: 100px;
+  line-height: 50px;
+}
+
 </style>
 
 <script src="<c:url value="/webjars/jquery/2.1.0/jquery.js" />"></script>
@@ -214,5 +265,46 @@ $(function() {
 		</div>
 	</nav>
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <nav role="navigation" class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">
+            	<img alt="" src="<c:url value='/resources/images/logo1.png'/>">
+            </a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                
+                <a href="#"><span class="glyphicon glyphicon-user"></span><br>Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 
