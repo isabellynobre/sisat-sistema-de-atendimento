@@ -132,6 +132,7 @@ img {
 li a {
   height: 100px;
   line-height: 50px;
+  width: 150px;
 }
 
 </style>
@@ -289,12 +290,10 @@ $(function() {
             <ul class="nav navbar-nav">
                 <li class="active">
                 
-                <a href="#"><span class="glyphicon glyphicon-user"></span><br>Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
+                <a href="#"><span class="glyphicon glyphicon-leaf"></span><br>Nutrição</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-off"></span><br>Sair</a></li>
             </ul>
         </div>
     </nav>
