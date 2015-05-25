@@ -25,12 +25,10 @@ public class ConsultaNutricionalServiceImpl extends GenericServiceImpl<ConsultaN
 	@Override
 	public List<ConsultaNutricional> getCircunferenciaAndData(Long id) {
 		return find("ConsultaNutricional.findCircunferenciaAndData", new SimpleMap<String, Object>("id", id)); 
-//		return null;
 	}
 
 	@Override
 	public List<ConsultaNutricional> getIMCAndData(Long id) {
 		return find("ConsultaNutricional.findIMCAndData", new SimpleMap<String, Object>("id", id));
 	}	
-
 }

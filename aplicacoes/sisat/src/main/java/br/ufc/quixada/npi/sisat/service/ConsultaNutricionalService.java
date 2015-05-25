@@ -6,7 +6,6 @@ import br.ufc.quixada.npi.service.GenericService;
 import br.ufc.quixada.npi.sisat.model.ConsultaNutricional;
 
 public interface ConsultaNutricionalService extends GenericService<ConsultaNutricional> {
-	public abstract ConsultaNutricional getConsultaNutricionalWithDocumentosById(Long id);
 	
 	public abstract List<ConsultaNutricional> getPesoAndData(Long id);
 
@@ -14,4 +13,5 @@ public interface ConsultaNutricionalService extends GenericService<ConsultaNutri
 
 	public abstract List<ConsultaNutricional> getIMCAndData(Long id);
 
+	public abstract ConsultaNutricional getConsultaNutricionalWithDocumentosById(Long id);
 }
